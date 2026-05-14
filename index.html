@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonChat // Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Auth Screen -->
+        <div id="auth-screen" class="screen">
+            <h1 class="glitch">FMGC-HSC-SCIENCE-2027</h1>
+            
+            <div id="auth-form-container">
+                <h3 id="auth-title">LOGIN_REQUIRED</h3>
+                <input type="email" id="email-input" placeholder="EMAIL_ADDR" autocomplete="off">
+                <input type="password" id="pass-input" placeholder="PASSWORD" autocomplete="off">
+                
+                <div class="auth-buttons">
+                    <button id="main-auth-btn">PROCEED</button>
+                    <button id="toggle-auth-mode">NEED ACCOUNT?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen hidden">
+            <header>
+                <div class="status-bar">
+                    <span id="user-display">USER::NULL</span>
+                    <button id="logout-btn">DISCONNECT</button>
+                </div>
+            </header>
+            <div id="chat-box">
+                <div id="messages"></div>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="msg-input" placeholder="Type message..." autocomplete="off">
+                <button type="submit" id="send-btn">SEND</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
